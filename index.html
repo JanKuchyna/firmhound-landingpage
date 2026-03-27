@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FirmHound — Najděte potenciální zákazníky popsem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">FirmHound</a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#how-it-works">Jak to funguje</a>
+        <a href="#showcase">Příklady</a>
+        <a href="#pricing">Ceny</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="https://app.firmhound.cz" class="btn btn--ghost">Přihlásit se</a>
+        <a href="#pricing" class="btn btn--primary">Vyzkoušet zdarma</a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker">
+    <div class="ticker__track">
+      <span>&#9670; DATABÁZE VŠECH ČESKÝCH FIREM</span>
+      <span>&#9670; VÝSLEDKY DO 10 MINUT</span>
+      <span>&#9670; PRVNÍ 3 HLEDÁNÍ ZDARMA</span>
+      <span>&#9670; BEZ KREDITNÍ KARTY</span>
+      <span>&#9670; PROHLEDÁVEJTE LIBOVOLNÝM TEXTEM</span>
+      <!-- duplicate for seamless loop -->
+      <span>&#9670; DATABÁZE VŠECH ČESKÝCH FIREM</span>
+      <span>&#9670; VÝSLEDKY DO 10 MINUT</span>
+      <span>&#9670; PRVNÍ 3 HLEDÁNÍ ZDARMA</span>
+      <span>&#9670; BEZ KREDITNÍ KARTY</span>
+      <span>&#9670; PROHLEDÁVEJTE LIBOVOLNÝM TEXTEM</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__headline">
+            Váš příští zákazník<br>
+            je v naší <em>databázi.</em><br>
+            Stačí ho popsat.
+          </h1>
+          <p class="hero__sub">
+            FirmHound prohledá celou databázi českých firem a vrátí ty,
+            které odpovídají vašemu popisu. Výsledky do 10 minut.
+          </p>
+          <div class="hero__ctas">
+            <a href="#pricing" class="btn btn--dark">Vyzkoušet zdarma</a>
+          </div>
+          <p class="hero__trust">&#10003; První 3 hledání zdarma &nbsp;&middot;&nbsp; &#10003; Bez kreditní karty &nbsp;&middot;&nbsp; &#10003; Výsledky do 10 minut</p>
+        </div>
+
+        <div class="hero__mockup" aria-hidden="true">
+          <div class="mockup__back">
+            <div class="mockup__screen">
+              <div class="chart chart--line"></div>
+            </div>
+          </div>
+          <div class="mockup__front">
+            <div class="mockup__screen">
+              <div class="chart chart--bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+      <div class="container">
+        <p class="section__label">PROČ FIRMHOUND</p>
+
+        <div class="features__header">
+          <h2 class="features__headline">
+            Najděte zákazníky slovem,<br>ne tabulkami.
+          </h2>
+          <p class="features__sub">
+            Napište popis, dostanete seznam. Bez filtrů, bez školení.
+          </p>
+        </div>
+
+        <div class="features__cards">
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/>
+              </svg>
+            </div>
+            <h3>Databáze českých firem s webem</h3>
+            <p>Prohledáváme registr českých firem, které mají vlastní web — těch, které lze skutečně oslovit.</p>
+          </div>
+
+          <div class="feature-card feature-card--accent">
+            <div class="feature-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3>Výsledky do 10 minut</h3>
+            <p>Zadáte popis, systém vyhledá. Vy dostanete seznam — bez čekání na specialistu.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <h3>Žádné složité filtry</h3>
+            <p>Prostě napíšete, co hledáte. Jako byste popsali zákazníka kolegovi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <p class="section__label">JAK TO FUNGUJE</p>
+        <h2 class="section__title">Tři kroky k seznamu firem</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step__num">1</span>
+            <h3>Popište, co hledáte</h3>
+            <p>Napište libovolný text — třeba „výrobní firmy v Jihomoravském kraji do 20 zaměstnanců".</p>
+          </div>
+          <div class="step">
+            <span class="step__num">2</span>
+            <h3>FirmHound prohledá databázi</h3>
+            <p>Systém porovná váš popis s profily tisíců českých firem a vybere ty nejrelevantnější.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">3</span>
+            <h3>Dostanete seznam firem</h3>
+            <p>S IČO, kontaktem a webem — do 10 minut, připravený k použití.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCREENSHOTS SHOWCASE ===== -->
+    <section class="showcase" id="showcase">
+      <div class="container">
+        <p class="section__label">PŘÍKLADY POUŽITÍ</p>
+        <div class="showcase__header">
+          <h2 class="showcase__headline">
+            Co uživatelé hledají —<br>
+            <em>a co dostávají.</em>
+          </h2>
+          <p class="showcase__sub">
+            Stačí popsat, koho hledáte. FirmHound udělá zbytek.
+          </p>
+        </div>
+
+        <div class="use-cases">
+          <div class="use-case">
+            <p class="use-case__query">„e-shopy s módou"</p>
+            <p class="use-case__result">&#8594; 47 firem</p>
+          </div>
+          <div class="use-case">
+            <p class="use-case__query">„agentury pro dočasné zaměstnance"</p>
+            <p class="use-case__result">&#8594; 12 relevantních firem</p>
+          </div>
+          <div class="use-case">
+            <p class="use-case__query">„architektonická a projekční studia"</p>
+            <p class="use-case__result">&#8594; 203 potenciálních klientů</p>
+          </div>
+        </div>
+
+        <div class="showcase__stage">
+          <div class="showcase__shot showcase__shot--main">
+            <div class="showcase__browser">
+              <div class="showcase__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <img src="Screenshot_20260326_104703.png" alt="FirmHound — výsledky hledání s přehledem firem" />
+            </div>
+            <p class="showcase__caption">
+              <strong>Výsledky hledání</strong> — přehled firem s IČO, datem vzniku a webem seřazený podle relevance.
+            </p>
+          </div>
+
+          <div class="showcase__shot showcase__shot--secondary">
+            <div class="showcase__browser">
+              <div class="showcase__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <img src="Screenshot_20260326_104827.png" alt="FirmHound — zadání nového hledání" />
+            </div>
+            <p class="showcase__caption">
+              <strong>Nové hledání</strong> — napište popis, žádné filtry ani nastavení.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2 class="section__title">Jasné ceny, žádná překvapení</h2>
+        <p class="section__sub">Začněte zdarma — bez kreditní karty.</p>
+
+        <div class="pricing__wrapper">
+          <div class="pricing-card">
+            <div class="pricing-card__badge">PREMIUM</div>
+            <p class="pricing-card__tier">PREMIUM PLAN</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">1 000</span>
+              <span class="pricing-card__currency">CZK</span>
+              <span class="pricing-card__period">/ měsíc</span>
+            </div>
+            <p class="pricing-card__desc">Pro obchodní týmy a freelancery, kteří hledají nové zákazníky.</p>
+
+            <ul class="pricing-card__features">
+              <li>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Neomezené vyhledávání firem</span>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> IČO, datum vzniku a web každé firmy</span>
+              </li>
+              <li>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Výsledky do 10 minut</span>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Přístup k celé databázi</span>
+              </li>
+            </ul>
+
+            <a href="https://app.firmhound.cz" class="btn btn--primary btn--full">Začít s Premium Plánem</a>
+            <p class="pricing-card__free">Nejste připraveni? <a href="https://app.firmhound.cz">Vyzkoušejte 3 hledání zdarma — bez platby.</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DARK CTA ===== -->
+    <section class="cta-dark" id="register">
+      <div class="cta-dark__waves" aria-hidden="true">
+        <svg viewBox="0 0 900 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 200 Q 150 100 300 200 T 600 200 T 900 200" stroke="rgba(200,96,26,0.25)" stroke-width="2" fill="none"/>
+          <path d="M0 220 Q 180 120 360 220 T 720 220 T 900 200" stroke="rgba(200,96,26,0.18)" stroke-width="1.5" fill="none"/>
+          <path d="M0 180 Q 120 80 240 180 T 480 180 T 720 180 T 900 160" stroke="rgba(200,96,26,0.20)" stroke-width="1.5" fill="none"/>
+          <path d="M0 240 Q 200 140 400 240 T 800 240" stroke="rgba(200,96,26,0.12)" stroke-width="1" fill="none"/>
+          <path d="M0 160 Q 100 60 200 160 T 400 160 T 600 160 T 800 140" stroke="rgba(200,96,26,0.14)" stroke-width="1" fill="none"/>
+          <path d="M0 280 Q 225 180 450 280 T 900 280" stroke="rgba(200,96,26,0.10)" stroke-width="1" fill="none"/>
+          <path d="M0 300 Q 150 200 300 300 T 600 300 T 900 320" stroke="rgba(200,96,26,0.08)" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
+      <div class="container cta-dark__inner">
+        <h2>Zjistěte, kdo jsou<br>vaši potenciální zákazníci.</h2>
+        <p>Tři hledání zdarma, bez kreditní karty. Výsledky do 10 minut.</p>
+        <a href="#pricing" class="btn btn--primary">Vyzkoušet zdarma</a>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <p class="section__label">KONTAKT</p>
+          <h2>Máte otázky?</h2>
+          <p>Napište nám. Odpovídáme do jednoho pracovního dne.</p>
+          <ul class="contact__details">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+              <a href="mailto:atelier@firmhound.cz">atelier@firmhound.cz</a>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              Praha, Česká republika
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">JMÉNO</label>
+            <input type="text" id="name" name="name" placeholder="Vaše jméno" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-MAIL</label>
+            <input type="email" id="email" name="email" placeholder="vy@firma.cz" />
+          </div>
+          <div class="form-group">
+            <label for="message">ZPRÁVA</label>
+            <textarea id="message" name="message" rows="5" placeholder="Jak vám můžeme pomoci?"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Odeslat zprávu</button>
+          <p class="form__status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__logo">FirmHound</p>
+      <p class="footer__tagline">Průzkum trhu pro české firmy</p>
+      <nav class="footer__links">
+        <a href="#">Ochrana osobních údajů</a>
+        <a href="#">Podmínky použití</a>
+        <a href="#">Nastavení cookies</a>
+        <a href="#">Podpora</a>
+      </nav>
+      <p class="footer__copy">&copy; 2024 FirmHound. Průzkum trhu pro české firmy.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
