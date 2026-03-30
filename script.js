@@ -78,17 +78,27 @@ if (contactForm) {
       return;
     }
 
-    // Simulate submission
     const submitBtn = contactForm.querySelector('button[type="submit"]');
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = 'Odesílám…';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      showStatus('Message sent! We\'ll be in touch shortly.', 'success');
-      contactForm.reset();
-      submitBtn.textContent = 'Send Message';
-      submitBtn.disabled = false;
-    }, 1200);
+    fetch('http://localhost:5000/api/sendInfoMail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message }),
+    })
+      .then(res => {
+        if (!res.ok) throw new Error();
+        showStatus('Zpráva odeslána! Brzy se vám ozveme.', 'success');
+        contactForm.reset();
+      })
+      .catch(() => {
+        showStatus('Nepodařilo se odeslat zprávu. Zkuste to prosím znovu.', 'error');
+      })
+      .finally(() => {
+        submitBtn.textContent = 'Odeslat zprávu';
+        submitBtn.disabled = false;
+      });
   });
 }
 
