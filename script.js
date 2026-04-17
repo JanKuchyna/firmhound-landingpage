@@ -82,7 +82,7 @@ if (contactForm) {
     submitBtn.textContent = 'Odesílám…';
     submitBtn.disabled = true;
 
-    fetch('http://localhost:5000/api/sendInfoMail', {
+    fetch((window.APP_CONFIG?.API_URL || '') + '/api/sendInfoMail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, message }),
@@ -108,6 +108,27 @@ function showStatus(msg, type) {
   formStatus.style.color = type === 'error' ? '#c0392b' : '#C8601A';
   setTimeout(() => { formStatus.textContent = ''; }, 5000);
 }
+
+/* =============================================
+   UMAMI — TRACK ALL BUTTON/LINK CLICKS
+   ============================================= */
+document.addEventListener('click', e => {
+  const el = e.target.closest('button, a.btn, .navbar__hamburger, .navbar__nav a');
+  if (!el || typeof umami === 'undefined') return;
+
+  const label =
+    el.dataset.track ||
+    el.textContent.trim().slice(0, 50) ||
+    el.getAttribute('aria-label') ||
+    el.getAttribute('href') ||
+    'unknown';
+
+  umami.track('click', {
+    label,
+    href: el.getAttribute('href') || null,
+    section: el.closest('section')?.id || el.closest('header, footer')?.tagName.toLowerCase() || null,
+  });
+});
 
 /* =============================================
    NAVBAR — ADD SHADOW ON SCROLL

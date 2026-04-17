@@ -8,6 +8,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+  <script>
+    (function () {
+      if (!window.APP_CONFIG || !window.APP_CONFIG.UMAMI_WEBSITE_ID) return;
+      const s = document.createElement('script');
+      s.defer = true;
+      s.src = window.APP_CONFIG.UMAMI_SCRIPT_URL;
+      s.dataset.websiteId = window.APP_CONFIG.UMAMI_WEBSITE_ID;
+      document.head.appendChild(s);
+    })();
+  </script>
 </head>
 <body>
 
