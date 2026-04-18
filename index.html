@@ -35,8 +35,8 @@
       </nav>
 
       <div class="navbar__actions">
-        <a href="https://app.firmhound.cz/login" class="btn btn--ghost">Přihlásit se</a>
-        <a href="#pricing" class="btn btn--primary">Vyzkoušet zdarma</a>
+        <a href="https://app.firmhound.cz/login" class="btn btn--ghost" data-umami-event="login-navbar">Přihlásit se</a>
+        <a href="https://app.firmhound.cz/register" class="btn btn--primary" data-umami-event="signup-navbar">Vyzkoušet zdarma</a>
       </div>
 
       <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
@@ -78,7 +78,7 @@
             které odpovídají vašemu popisu. Výsledky do 10 minut.
           </p>
           <div class="hero__ctas">
-            <a href="#pricing" class="btn btn--dark">Vyzkoušet zdarma</a>
+            <a href="https://app.firmhound.cz/register" class="btn btn--dark" data-umami-event="signup-hero">Vyzkoušet zdarma</a>
           </div>
           <p class="hero__trust">&#10003; První 3 hledání zdarma &nbsp;&middot;&nbsp; &#10003; Bez kreditní karty &nbsp;&middot;&nbsp; &#10003; Výsledky do 10 minut</p>
         </div>
@@ -236,6 +236,31 @@
         <p class="section__sub">Začněte zdarma — bez kreditní karty.</p>
 
         <div class="pricing__wrapper">
+          <div class="pricing-card pricing-card--free">
+            <div class="pricing-card__badge pricing-card__badge--free">ZDARMA</div>
+            <p class="pricing-card__tier">FREE PLAN</p>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount">0</span>
+              <span class="pricing-card__currency">CZK</span>
+              <span class="pricing-card__period">/ napořád</span>
+            </div>
+            <p class="pricing-card__desc">Vyzkoušejte FirmHound bez platby a bez kreditní karty.</p>
+
+            <ul class="pricing-card__features">
+              <li>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> 3 hledání zdarma</span>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Bez kreditní karty</span>
+              </li>
+              <li>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Plné výsledky každého hledání</span>
+                <span><svg class="check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="#C8601A"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg> Žádný závazek</span>
+              </li>
+            </ul>
+
+            <a href="https://app.firmhound.cz/register" class="btn btn--dark btn--full" data-umami-event="signup-pricing-free">Vyzkoušet zdarma</a>
+            <p class="pricing-card__free">Registrace zabere méně než minutu.</p>
+          </div>
+
           <div class="pricing-card">
             <div class="pricing-card__badge">PREMIUM</div>
             <p class="pricing-card__tier">PREMIUM PLAN</p>
@@ -257,8 +282,8 @@
               </li>
             </ul>
 
-            <a href="https://app.firmhound.cz/register" class="btn btn--primary btn--full">Začít s Premium Plánem</a>
-            <p class="pricing-card__free">Nejste připraveni? <a href="https://app.firmhound.cz/register">Vyzkoušejte 3 hledání zdarma — bez platby.</a></p>
+            <a href="https://app.firmhound.cz/register" class="btn btn--primary btn--full" data-umami-event="signup-pricing-premium">Začít s Premium Plánem</a>
+            <p class="pricing-card__free">Nejste připraveni? <a href="https://app.firmhound.cz/register" data-umami-event="signup-pricing-premium-link">Vyzkoušejte 3 hledání zdarma — bez platby.</a></p>
           </div>
         </div>
       </div>
@@ -280,7 +305,7 @@
       <div class="container cta-dark__inner">
         <h2>Zjistěte, kdo jsou<br>vaši potenciální zákazníci.</h2>
         <p>Tři hledání zdarma, bez kreditní karty. Výsledky do 10 minut.</p>
-        <a href="#pricing" class="btn btn--primary">Vyzkoušet zdarma</a>
+        <a href="https://app.firmhound.cz/register" class="btn btn--primary" data-umami-event="signup-cta-dark">Vyzkoušet zdarma</a>
       </div>
     </section>
 

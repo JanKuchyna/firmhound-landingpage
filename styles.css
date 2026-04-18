@@ -560,6 +560,9 @@ ul { list-style: none; }
 .pricing__wrapper {
   display: flex;
   justify-content: center;
+  align-items: stretch;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
 .pricing-card {
@@ -571,6 +574,21 @@ ul { list-style: none; }
   width: 100%;
   max-width: 360px;
   box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card--free {
+  border-color: var(--dark);
+}
+
+.pricing-card__badge--free {
+  background: var(--accent);
+  color: #fff;
+}
+
+.pricing-card .pricing-card__features {
+  flex: 1;
 }
 
 .pricing-card__badge {
